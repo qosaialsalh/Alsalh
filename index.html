@@ -2,42 +2,26 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta name="direction" content="خدمات طباعة أونلاين احترافية: طباعة كتيبات، بروشور، بطاقات عمل، بانرات، والتيشيرتات، ودعوات زواج، مع التصميم والتوصيل السريع لجميع مطبوعاتك التجارية والشخصية">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <meta name="direction"
+        content="خدمات طباعة أونلاين احترافية: طباعة كتيبات، بروشور، بطاقات عمل، بانرات، والتيشيرتات، ودعوات زواج، مع التصميم والتوصيل السريع لجميع مطبوعاتك التجارية والشخصية">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>طباعة - خدمات الطباعة الشاملة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* --primary-color: #002623;
-
-            --secondary-color: #4A151E;
-
-            --accent-color: #002623;
-
-            --light-color: #ffffff;
-
-            --dark-color: #161616;
-
-            --gray-color: #3d3a3b;
-
-            --success-color: #428177;
-
-            -decorative-color-1: #6b1f2a;
-
-            --decorative-color-2: #b9a779;
-
-            --decorative-color-3: #054239; */
-
-
-
-
-
-                    --primary-color: #1A365D;
+            --primary-color: #1A365D;
             --secondary-color: #F6AD55;
             --accent-color: #E9B213;
             --light-color: #F8F9FA;
@@ -86,7 +70,6 @@
 
         .nav-logo img {
             height: 50px;
-
         }
 
         .nav-menu {
@@ -97,6 +80,7 @@
 
         .nav-item {
             margin-left: 25px;
+            position: relative;
         }
 
         .nav-link {
@@ -105,6 +89,7 @@
             font-weight: 600;
             transition: color 0.3s;
             position: relative;
+            cursor: pointer;
         }
 
         .nav-link:hover {
@@ -129,15 +114,144 @@
         .hamburger {
             display: none;
             cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
         }
 
         .bar {
             display: block;
-            width: 25px;
+            width: 100%;
             height: 3px;
-            margin: 5px auto;
             background-color: var(--dark-color);
             transition: all 0.3s;
+            border-radius: 3px;
+        }
+
+        /* أنماط القائمة المنسدلة */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 220px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            padding: 15px 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(100px);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 10px 20px;
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .dropdown-item:hover {
+            /* visibility: visible; */
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            padding-right: 25px;
+        }
+
+        .dropdown-item::before {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid var(--primary-color);
+            opacity: 0;
+            transition: opacity 0.3;
+        }
+
+        .dropdown-item:hover::before {
+            opacity: 0;
+            /* visibility: visible; */
+        }
+
+        /* أنماط القائمة متعددة المستويات */
+        .mega-dropdown {
+            position: static;
+        }
+
+        .mega-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1001;
+            border-top: 3px solid var(--accent-color);
+        }
+
+        .mega-dropdown.active .mega-dropdown-content {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-dropdown-content::after {
+            display: block;
+        }
+
+        .mega-dropdown-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mega-dropdown-column h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .mega-dropdown-column ul {
+            list-style: none;
+        }
+
+        .mega-dropdown-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .mega-dropdown-column ul li a {
+            color: var(--dark-color);
+            /* background-color: red; */
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .mega-dropdown-column ul li a:hover {
+            color: white;
+            padding-right: 10px;
+             background-color: var( --success-color);
         }
 
         /* أنماط الأقسام العامة */
@@ -226,16 +340,14 @@
             gap: 10px;
             margin-top: 40px;
         }
-        .services-container1 .service-card .service-icon img{
-max-width: 100%;
 
+        .services-container1 .service-card .service-icon img {
+            max-width: 100%;
         }
 
-
         .service-card {
-            display: grid
-;
-    align-items: end;
+            display: grid;
+            align-items: end;
             background: white;
             border-radius: 10px;
             padding: 10px;
@@ -252,7 +364,6 @@ max-width: 100%;
             padding: 30px;
             box-shadow: 0px 0px 17px -14px rgba(0, 0, 0, 0.5);
             text-align: center;
-            /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); */
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             overflow: hidden;
@@ -266,7 +377,6 @@ max-width: 100%;
             width: 100%;
             height: 5px;
             margin-bottom: 10px;
-            /* background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); */
         }
 
         .service-card1::before {
@@ -276,7 +386,6 @@ max-width: 100%;
             right: 0;
             width: 100%;
             height: 5px;
-            /* background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); */
         }
 
         .service-card:hover {
@@ -303,7 +412,6 @@ max-width: 100%;
 
         .service-card h3 {
             font-weight: 900;
-
             font-size: 16px;
             margin-bottom: 15px;
             color: var(--primary-color);
@@ -320,10 +428,11 @@ max-width: 100%;
             margin-bottom: 20px;
             color: var(--dark-color);
         }
-          .product-detail-price,
+
+        .product-detail-price,
         .cart-item-price,
         .cart-total,
-        .product-price{
+        .product-price {
             display: none;
         }
 
@@ -333,7 +442,7 @@ max-width: 100%;
         }
 
         .service-price {
-             display: none;
+            display: none;
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--secondary-color);
@@ -696,7 +805,7 @@ max-width: 100%;
         }
 
         .footer-links a:hover {
-            opacity: 100;
+            opacity: 1;
             color: white;
         }
 
@@ -732,27 +841,47 @@ max-width: 100%;
             .order-steps::before {
                 display: none;
             }
-        }
 
-        @media (max-width: 768px) {
-            .services-container1{
-                 display: grid;
-            /* grid-template-columns: repeat(auto-fit); */
+            .dropdown-menu {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                display: none;
+                padding: 0;
+                margin-top: 10px;
+                transform: none;
             }
-            .hamburger {
+
+            .nav-item.active .dropdown-menu {
                 display: block;
             }
 
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
+            .mega-dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                padding: 10px;
             }
 
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
+            .mega-dropdown.active .mega-dropdown-content {
+                display: block;
             }
 
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
+            .mega-dropdown-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-container1 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hamburger {
+                display: flex;
             }
 
             .nav-menu {
@@ -766,6 +895,8 @@ max-width: 100%;
                 transition: 0.3s;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 padding: 20px 0;
+                height: calc(100vh - 80px);
+                overflow-y: auto;
             }
 
             .nav-menu.active {
@@ -774,9 +905,60 @@ max-width: 100%;
 
             .nav-item {
                 margin: 15px 0;
+                width: 100%;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 15px;
+                width: 100%;
             }
 
             .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* تحسين عرض القائمة المنسدلة داخل القائمة */
+            .nav-item select.list {
+                width: 90%;
+                padding: 10px;
+                margin: 10px auto;
+                border: 1px solid var(--gray-color);
+                border-radius: 5px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                display: none;
+                padding: 0;
+                margin-top: 10px;
+                transform: none;
+            }
+
+            .nav-item.active .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-item {
+                padding: 12px 30px;
+            }
+
+            .mega-dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                padding: 10px;
+            }
+
+            .mega-dropdown.active .mega-dropdown-content {
+                display: block;
+            }
+
+            .mega-dropdown-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -834,6 +1016,27 @@ max-width: 100%;
                 max-width: 100%;
             }
         }
+
+        .list {
+            float: none;
+            border: none;
+            background: transparent;
+            color: var(--dark-color);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .list:hover,
+        .list:focus {
+            border: none;
+            outline: none;
+        }
+
+        /* إضافة أنماط للقائمة المنسدلة المفتوحة */
+        .mega-dropdown.active .nav-link::after {
+            transform: rotate(180deg);
+        }
     </style>
     <!-- روابط خطوط Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
@@ -848,11 +1051,111 @@ max-width: 100%;
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">الرئيسية</a></li>
-                <li class="nav-item"><a href="#services1" class="nav-link">خدماتنا</a></li>
+                <li class="nav-item mega-dropdown">
+                    <a href="#" class="nav-link">خدماتنا</a>
+                    <div class="mega-dropdown-content">
+                        <div class="mega-dropdown-container">
+                            <div class="mega-dropdown-column">
+                                <h4>مطبوعات رقمية</h4>
+                                <ul>
+                                    <li><a href="pn1.html">بطاقات العمل</a></li>
+                                    <li><a href="pr4.html"> اختام</a></li>
+                                    <li><a href="pn3.html">اظرف </a></li>
+                                    <li><a href="pn2.html"> كروت شخصية</a></li>
+                                    <li><a href="pn10.html"> فلاير</a></li>
+                                    <li><a href="pn6.html"> فولدر شركتنا</a></li>
+                                    <li"><a href="pr-1-2.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-dropdown-column">
+                                <h4>مطبوعات كبيرة الحجم</h4>
+                                      <ul>
+                                    <li><a href="pn44.html"> بنرات واستيكرات</a></li>
+                                    <li><a href="pr4-2.html"> بوستر</a></li>
+                                    <li><a href="pr6.html">عزتنا بطبعتنا </a></li>
+                                    <li><a href="pn66.html"> لوحات </a></li>
+                                    <li><a href="pn4-3.html"> ستيكرات</a></li>
+                                    <li><a href="pn22.html"> ستاندات </a></li>
+                                       <li"><a href="pr5.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-dropdown-column">
+                                <h4>مطبوعات هدايا</h4>
+                                    <ul>
+                                    <li><a href="pn7-7.html"> اقلام</a></li>
+                                    <li><a href="pr1-11.html"> اكواب</a></li>
+                                    <li><a href="pn1-4.html">اكياس </a></li>
+                                    <li><a href="pn7-10.html"> بادج </a></li>
+                                    <li><a href="pn7-9.html"> بروشات</a></li>
+                                    <li><a href="pn7-11.html"> تي شرت </a></li>
+                                    <li"><a href="pr4-3.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-dropdown-column">
+                                <h4>منتجات تغليف</h4>
+                                   <ul>
+                                    <li><a href="pn1-11.html"> اكواب ورقية</a></li>
+                                    <li><a href="pr1-5.html"> كراتين شحن</a></li>
+                                    <li><a href="pn1-7.html">ورق تغليف </a></li>
+                                    <li><a href="pn13.html"> كروت اهداء </a></li>
+                                    <li><a href="pn1-9.html"> شرائط تغليف</a></li>
+                                    <li><a href="pn15.html">  تاقات منوعة</a></li>
+                                  
+                                    <li"><a href="pr4-2.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="#portfolio" class="nav-link">معرض الأعمال</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">عن الشركة</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">اتصل بنا</a></li>
-                <li class="nav-item"><a href="#order" class="btn btn-accent">طلب خدمة</a></li>
+                <li class="nav-item"><a href="#order" class="btn btn-accent"
+                        style="background-color: #4A151E; color: #e9ecef;">طلب خدمة</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -862,14 +1165,14 @@ max-width: 100%;
         </div>
     </nav>
 
-    <!-- صفحة الخدمات -->
+    <!-- صفحة الهيرو -->
     <section id="home" class="hero">
         <div class="container" style="display: flex; align-items: center;">
             <div class="hero-content">
                 <h1>حلول طباعة مبتكرة لعملاء متميزون</h1>
                 <p>نقدم منتجات طباعة عالية الجودة بأسعار تنافسية ووقت تسليم قياسي</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary" style="font-size: 15px">استكشف منتجاتنا</a>
+                    <a href="#services1" class="btn btn-primary" style="font-size: 15px">استكشف منتجاتنا</a>
                     <a href="#contact" class="btn btn-secondary" style="font-size: 15px">اطلب خدمة</a>
                 </div>
             </div>
@@ -878,28 +1181,8 @@ max-width: 100%;
             </div>
         </div>
     </section>
- <!-- kkkkkkkkkkldsaaaaaalklkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk -->
-     <nav>
-        <div class="container nav-container">
-            <div class="nav-logo">
-                <img src="logo.png" alt="شعار الشركة">
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">الرئيسية</a></li>
-                <li class="nav-item"><a href="#services1" class="nav-link">خدماتنا</a></li>
-                <li class="nav-item"><a href="#portfolio" class="nav-link">معرض الأعمال</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">عن الشركة</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">اتصل بنا</a></li>
-                <li class="nav-item"><a href="#order" class="btn btn-accent" style="background-color: #4A151E; color: #e9ecef;">طلب خدمة</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-    <!-- jhbhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+
+    <!-- صفحة الخدمات -->
     <section id="services1">
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 15px;">خدماتنا</h2>
@@ -910,7 +1193,6 @@ max-width: 100%;
                 لِيُلَابِيَ كَافَةَ احْتِيَاجَاتِكَ بِسُهُولَةٍ وَإِتْقَانٍ.
                 <br>
                 تَصَفَّحْ أَقْسَامَنَا بِسُهُولَةٍ
-
             </p>
 
             <div class="services-container1">
@@ -918,162 +1200,70 @@ max-width: 100%;
 ;
     align-items: end;">
                     <div class="service-icon">
-                        <img src="home1_1.jpg">
+                        <img src="21.jpg">
                         <!-- <i class="fas fa-print"></i> -->
                     </div>
-                    <h3>  مطبوعات رقمية  </h3>
-                    <p>مطبوعات رقمية تجمع بين دقة التصميم وسهولة الوصول. 
-                        
-                        
+                    <h3> مطبوعات رقمية </h3>
+                    <p>مطبوعات رقمية تجمع بين دقة التصميم وسهولة الوصول.
+
+
                     </p>
-                        
-                        <a href="pr-1-1.html" class="btn btn-primary">تصفح الأن </a>
-                    </div>
-                    
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
+
+                    <a href="pr-1-1.html" class="btn btn-primary" style="font-size: 15px">استكشف الخدمة</a>
+                </div>
+                <div class="service-card" style="display: grid;
+    align-items: end;">
+                    <div class="service-icon">
                         <img src="home1_2.jpg">
-                        <!-- <i class="fas fa-print"></i> -->
+                        <!-- <i class="fas fa-sign"></i> -->
                     </div>
-                    <h3>مطبوعات كبيرة الحجم </h3>
-                    <p>دقة عالية.. وألوان vibrant حتى في أكبر الأحجام! نضمن لك وضوحًا</p>
-
-                    <a href="pr2-1.html" class="btn btn-primary">تصفح الأن </a>
+                    <h3>مطبوعات كبيرة الحجم</h3>
+                    <p>مطبوعات كبيرة الحجم تجمع بين دقة التصميم وسهولة الوصول.</p>
+                    <a href="pr2-1.html" class="btn btn-primary" style="font-size: 15px">استكشف الخدمة</a>
                 </div>
-
-                <div class="service-card">
+                <div class="service-card" style="display: grid;
+    align-items: end;">
                     <div class="service-icon">
-                          <img src="home1_3.jpg">
-                        <!-- <i class="fas fa-print"></i> -->
+                        <img src="home1_3.jpg">
+                        <!-- <i class="fas fa-gift"></i> -->
                     </div>
-                    <h3> مطبوعات هدايا </h3>
-                <p>هدايا علامتك التجارية.. أنيقة ومؤثرة!اطبع شعارك، ألوانك، أو رسالتك</p>
-
-                    <a href="pr4.html" class=" btn btn-primary">تصفح الأن </a>
+                    <h3>مطبوعات هدايا</h3>
+                    <p>مطبوعات هدايا تجمع بين دقة التصميم وسهولة الوصول.</p>
+                    <a href="pr4.html" class="btn btn-primary" style="font-size: 15px">استكشف الخدمة</a>
                 </div>
-          
-           
-              
-            
-                <div class="service-card">
+                <div class="service-card" style="display: grid;
+    align-items: end;">
                     <div class="service-icon">
-                          <img src="home1_4.jpg">
-                        <!-- <i class="fas fa-print"></i> -->
+                        <img src="home1_4.jpg">
+                        <!-- <i class="fas fa-box"></i> -->
                     </div>
-                    <h3> منتجات التغليف </h3>
-                    <p>تغليفنا ليس مجرد غلاف، بل هو هوية مرئية ووعد بالجودة.
-                        </p>
-
-                    <a href="pr3.html" class=" btn btn-primary">تصفح الأن </a>
+                    <h3>منتجات التغليف</h3>
+                    <p>منتجات تغليف تجمع بين دقة التصميم وسهولة الوصول.</p>
+                    <a href="pr3.html" class="btn btn-primary" style="font-size: 15px">استكشف الخدمة</a>
                 </div>
+                <!-- <div class="service-card" style="display: grid;
+    align-items: end;">
+                    <div class="service-icon">
+                        <img src="home1_5.jpg">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>دروع خشب واكريليك</h3>
+                    <p>دروع خشب واكريليك تجمع بين دقة التصميم وسهولة الوصول.</p>
+                    <a href="pr5.html" class="btn btn-primary" style="font-size: 15px">استكشف الخدمة</a>
+                </div> -->
+                <!-- <div class="service-card" style="display: grid;
+    align-items: end;">
+                    <div class="service-icon">
+                        <img src="home1_6.jpg">
+                         <i class="fas fa-tshirt"></i> -->
+                    <!-- </div>
+                    <h3>عزنا بطبعتنا</h3>
+                    <p>عزنا بطبعتنا تجمع بين دقة التصميم وسهولة الوصول.</p>
+                    <a href="pr6.html" class="btn btn-primary" style="font-size: 15px">استكشف الخدمة</a>
+                </div>  -->
             </div>
         </div>
     </section>
-
-    <!-- ent the clss -->
-<!-- 
-    <section id="services" style="background-color: #cee2e0;">
-        <div class="container">
-            <h2 class="section-title">منتجاتنا</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">نقدم مجموعة متكاملة من منتجات الطباعة
-                والتصميم لتلبية جميع احتياجاتك بدقة وجودة عالية وأسعار تنافسية</p>
-
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-print"></i>
-                    </div>
-                    <h3 style="font-size: 20px;">منتجات الطباعة </h3>
-                    <p>طباعة سريعة ودقيقة لمختلف المستندات والمواد الترويجية باستخدام أحدث التقنيات</p>
-                    <div class="service-price">تبدأ من 0.50 ريال</div>
-                    <a href="digital_print.html" class="btn btn-primary">تصفح الأن </a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <h3 style="font-size: 20px;"> منتجات التغليف</h3>
-                    <p>طباعة مستندات بأعلى جودة وتغليفها بشكل احترافي مع خيارات متعددة للتجليد</p>
-                    <div class="service-price">تبدأ من 0.30 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        
-                     
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 style="font-size: 20px;"> ستاندات</h3>
-                    <p>تصميم إبداعي للمواد المطبوعة والرقمية بمختلف أنواعها بفريق مصممين محترفين</p>
-                    <div class="service-price">تبدأ من 100 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-id-badge"></i>
-                    </div>
-                    <h3 style="font-size: 20px;"> بنرات واستكرات</h3>
-                    <p>تصميم وطباعة بطاقات عمل مميزة تعبر عن هوية markتجك بأفضل الخامات والتصاميم</p>
-                    <div class="service-price">تبدأ من 5 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-scroll"></i>
-                    </div>
-                    <h3 style="font-size: 20px;"> لوحات ومجسمات</h3>
-                    <p>تصميم وطباعة لوحات إعلانية بمقاسات مختلفة وبجودة عالية مقاومة للعوامل الجوية</p>
-                    <div class="service-price">تبدأ من 200 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tshirt"></i>
-                    </div>
-                    <h3 style="font-size: 20px;"> ملصقات</h3>
-                    <p>طباعة مبتكرة على الملابس والأقمشة بتقنيات متطورة ودائمة</p>
-                    <div class="service-price">تبدأ من 20 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                </div>
-               
-                <div class="service-card">
-                    <div class="service-icon">
-                         <i class="fas fa-print"></i>
-                    </div>
-                    <h3 style="font-size: 20px;"> هدايا دعائية</h3>
-                    <p>طباعة مبتكرة على الملابس والأقمشة بتقنيات متطورة ودائمة</p>
-                    <div class="service-price">تبدأ من 30 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tshirt"></i>
-                    </div>
-                    <h3 style="font-size: 20px;">  دروع خشب واكريك</h3>
-                    <p>طباعة مبتكرة على الملابس والأقمشة بتقنيات متطورة ودائمة</p>
-                    <div class="service-price">تبدأ من 25 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                
-                </div>
-               ظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظ
-                <div class="service-card">
-                    <div class="service-icon">
-                            <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <h3 style="font-size: 20px;"> عزنا بطبعتنا</h3>
-                    <p>طباعة مبتكرة على الملابس والأقمشة بتقنيات متطورة ودائمة</p>
-                    <div class="service-price">تبدأ من 40 ريال</div>
-                    <a href="#order" class="btn btn-primary">تصفح الان</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- صفحة معرض الأعمال -->
     <section id="portfolio" style="background-color: #f8f9fa;">
@@ -1425,9 +1615,9 @@ max-width: 100%;
             </div>
         </div>
     </footer>
-
+    <!-- JavaScript -->
     <script>
-        // JavaScript للتحكم في قائمة الهامبرجر
+        // القائمة المتحركة للهواتف
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
 
@@ -1441,15 +1631,15 @@ max-width: 100%;
             navMenu.classList.remove("active");
         }));
 
-        // فلترة معرض الأعمال
+        // تصفية معرض الأعمال
         const filterButtons = document.querySelectorAll(".filter-btn");
         const portfolioItems = document.querySelectorAll(".portfolio-item");
 
         filterButtons.forEach(button => {
             button.addEventListener("click", () => {
-                // إزالة النشاط من جميع الأزرار
+                // إزالة النشط من جميع الأزرار
                 filterButtons.forEach(btn => btn.classList.remove("active"));
-                // إضافة النشاط للزر المختار
+                // إضافة النشط للزر المحدد
                 button.classList.add("active");
 
                 const filterValue = button.getAttribute("data-filter");
@@ -1464,7 +1654,7 @@ max-width: 100%;
             });
         });
 
-        // اختيار خدمة في صفحة الطلب
+        // اختيار خيارات الخدمة
         const serviceOptions = document.querySelectorAll(".service-option");
 
         serviceOptions.forEach(option => {
@@ -1474,23 +1664,48 @@ max-width: 100%;
             });
         });
 
-        // إرسال النماذج
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
+        // إدارة القائمة المنسدلة للخدمات
+        const megaDropdown = document.querySelector('.mega-dropdown');
+        const megaDropdownLink = document.querySelector('.mega-dropdown .nav-link');
+
+        // إضافة حدث النقر لعنصر "خدماتنا"
+        megaDropdownLink.addEventListener('click', function (e) {
             e.preventDefault();
-            alert("شكراً لك! تم استلام رسالتك وسنتواصل معك قريباً.");
-            this.reset();
+            e.stopPropagation();
+            megaDropdown.classList.toggle('active');
         });
 
-        document.getElementById("orderForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("شكراً لك! تم استلام طلبك وسنتواصل معك قريباً لتأكيد التفاصيل.");
-            this.reset();
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function (e) {
+            if (!megaDropdown.contains(e.target)) {
+                megaDropdown.classList.remove('active');
+            }
         });
+
+        // منع إغلاق القائمة عند النقر داخلها
+        megaDropdown.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+
+        // إدارة القوائم المنسدلة في وضع الجوال
+        if (window.innerWidth <= 768) {
+            const navItems = document.querySelectorAll('.nav-item');
+
+            navItems.forEach(item => {
+                const link = item.querySelector('.nav-link');
+
+                link.addEventListener('click', function (e) {
+                    if (item.classList.contains('mega-dropdown')) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    } else if (item.querySelector('.dropdown-menu')) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            });
+        }
     </script>
-    <!-- Static App Form Collection Script -->
-    <script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
-
-    <script src="https://static.app/js/static.js" type="text/javascript"></script>
 </body>
 
 </html>

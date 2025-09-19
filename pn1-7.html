@@ -232,7 +232,12 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-
+ .product-detail-price,
+        .cart-total,
+        .product-price,
+        .cart-item-price{
+            display: none;
+        }
         .product-image {
             height: 180px;
             overflow: hidden;
@@ -285,15 +290,10 @@
             min-height: 40px;
             line-height: 1.5;
         }
-          .product-detail-price,
-        .cart-item-price,
-        .cart-total,
-        .product-price{
-            display: none;
-        }
+         
 
         .product-price {
-             display: none;
+          
             font-weight: bold;
             color: var(--primary-color);
             font-size: 1.1rem;
