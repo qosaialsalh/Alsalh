@@ -59,78 +59,7 @@
         }
 
         /* أنماط الشريط العلوي */
-        nav {
-            background-color: #FFFFFF;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 10000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo img {
-            height: 50px;
-
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-item {
-            margin-left: 25px;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 600;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            right: 0;
-            background-color: var(--accent-color);
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-
-        .hamburger {
-            /* display: none; */
-            cursor: pointer;
-        }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            background-color: var(--dark-color);
-            transition: all 0.3s;
-        }
+      
 
         /* أنماط صفحة الخدمة */
         .service-header {
@@ -645,7 +574,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .hamburger {
                 display:block;
             }
@@ -696,8 +625,327 @@
 
         .nav-item {
             margin: 15px 0;
-        }
+        } */
 
+        /* أنماط الشريط العلوي */
+nav {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 25px;
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: color 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    right: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-color);
+    transition: all 0.3s;
+    border-radius: 3px;
+}
+
+/* أنماط القائمة المنسدلة */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.dropdown-item:hover {
+     /* visibility: visible; */
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+    padding-right: 25px;
+}
+
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3;
+}
+
+.dropdown-item:hover::before {
+    opacity: 0;
+    /* visibility: visible; */
+}
+
+/* أنماط القائمة متعددة المستويات */
+.mega-dropdown {
+    position: static;
+}
+
+.mega-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 1001;
+    border-top: 3px solid var(--accent-color);
+}
+
+.mega-dropdown.active .mega-dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-dropdown-content::after{
+    display: block;
+}
+
+.mega-dropdown-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mega-dropdown-column h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.mega-dropdown-column ul {
+    list-style: none;
+}
+
+.mega-dropdown-column ul li {
+    margin-bottom: 10px;
+}
+
+.mega-dropdown-column ul li a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.3s;
+    display: block;
+    padding: 5px 0;
+}
+
+.mega-dropdown-column ul li a:hover {
+    color: var(--primary-color);
+    padding-right: 10px;
+}
+
+/* إضافة أنماط للقائمة المنسدلة المفتوحة */
+.mega-dropdown.active .nav-link::after {
+    transform: rotate(180deg);
+}
+
+/* أنماط الاستجابة للشاشات الصغيرة */
+@media (max-width: 992px) {    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        padding: 0;
+        margin-top: 10px;
+        transform: none;
+    }
+    
+    .nav-item.active .dropdown-menu {
+        display: block;
+    }
+
+    .mega-dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .mega-dropdown.active .mega-dropdown-content {
+        display: block;
+    }
+
+    .mega-dropdown-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 15px;
+        width: 100%;
+    }
+
+    /* تحسين عرض القائمة المنسدلة داخل القائمة */
+    .nav-item select.list {
+        width: 90%;
+        padding: 10px;
+        margin: 10px auto;
+        border: 1px solid var(--gray-color);
+        border-radius: 5px;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        padding: 0;
+        margin-top: 10px;
+        transform: none;
+    }
+    
+    .nav-item.active .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-item {
+        padding: 12px 30px;
+    }
+
+    .mega-dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .mega-dropdown.active .mega-dropdown-content {
+        display: block;
+    }
+
+    .mega-dropdown-container {
+        grid-template-columns: 1fr;
+    }
+}
         .products-grid {
             grid-template-rows: 1fr;
         }
@@ -718,19 +966,118 @@
 
 <body>
     <!-- شريط التنقل -->
-    <nav>
+   <nav>
         <div class="container nav-container">
             <div class="nav-logo">
                 <img src="logo.png" alt="شعار الشركة">
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">الرئيسية</a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link">خدماتنا</a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link">معرض الأعمال</a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link">عن الشركة</a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link">اتصل بنا</a></li>
-                <li class="nav-item"><a href="index.html" class="btn btn-accent" style="background: var(--secondary-color);
-    color: white;">طلب خدمة</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li class="nav-item mega-dropdown">
+                    <a href="#" class="nav-link">خدماتنا</a>
+                    <div class="mega-dropdown-content">
+                        <div class="mega-dropdown-container">
+                            <div class="mega-dropdown-column">
+                                <h4>مطبوعات رقمية</h4>
+                                <ul>
+                                    <li><a href="pn1.html">بطاقات العمل</a></li>
+                                    <li><a href="pr4.html"> اختام</a></li>
+                                    <li><a href="pn3.html">اظرف </a></li>
+                                    <li><a href="pn2.html"> كروت شخصية</a></li>
+                                    <li><a href="pn10.html"> فلاير</a></li>
+                                    <li><a href="pn6.html"> فولدر شركتنا</a></li>
+                                    <li"><a href="pr-1-2.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-dropdown-column">
+                                <h4>مطبوعات كبيرة الحجم</h4>
+                                      <ul>
+                                    <li><a href="pn44.html"> بنرات واستيكرات</a></li>
+                                    <li><a href="pr4-2.html"> بوستر</a></li>
+                                    <li><a href="pr6.html">عزتنا بطبعتنا </a></li>
+                                    <li><a href="pn66.html"> لوحات </a></li>
+                                    <li><a href="pn4-3.html"> ستيكرات</a></li>
+                                    <li><a href="pn22.html"> ستاندات </a></li>
+                                       <li"><a href="pr5.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-dropdown-column">
+                                <h4>مطبوعات هدايا</h4>
+                                    <ul>
+                                    <li><a href="pn7-7.html"> اقلام</a></li>
+                                    <li><a href="pr1-11.html"> اكواب</a></li>
+                                    <li><a href="pn1-4.html">اكياس </a></li>
+                                    <li><a href="pn7-10.html"> بادج </a></li>
+                                    <li><a href="pn7-9.html"> بروشات</a></li>
+                                    <li><a href="pn7-11.html"> تي شرت </a></li>
+                                    <li"><a href="pr4-3.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-dropdown-column">
+                                <h4>منتجات تغليف</h4>
+                                   <ul>
+                                    <li><a href="pn1-11.html"> اكواب ورقية</a></li>
+                                    <li><a href="pr1-5.html"> كراتين شحن</a></li>
+                                    <li><a href="pn1-7.html">ورق تغليف </a></li>
+                                    <li><a href="pn13.html"> كروت اهداء </a></li>
+                                    <li><a href="pn1-9.html"> شرائط تغليف</a></li>
+                                    <li><a href="pn15.html">  تاقات منوعة</a></li>
+                                  
+                                    <li"><a href="pr4-2.html" style="display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;"> منتجات اخرى</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+              </li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">معرض الأعمال</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">عن الشركة</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">اتصل بنا</a></li>
+                <li class="nav-item"><a href="#order" class="btn btn-accent"
+                        style="background-color: #4A151E; color: #e9ecef;">طلب خدمة</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -998,18 +1345,73 @@
     </footer>
     <script>
         // JavaScript للتحكم في قائمة الهامبرجر
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
+        // const hamburger = document.querySelector(".hamburger");
+        // const navMenu = document.querySelector(".nav-menu");
 
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
+        // hamburger.addEventListener("click", () => {
+        //     hamburger.classList.toggle("active");
+        //     navMenu.classList.toggle("active");
+        // });
+
+        // document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        //     hamburger.classList.remove("active");
+        //     navMenu.classList.remove("active");
+        // }));
+        // القائمة المتحركة للهواتف
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}));
+
+// إدارة القائمة المنسدلة للخدمات
+const megaDropdown = document.querySelector('.mega-dropdown');
+const megaDropdownLink = document.querySelector('.mega-dropdown .nav-link');
+
+// إضافة حدث النقر لعنصر "خدماتنا"
+megaDropdownLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    megaDropdown.classList.toggle('active');
+});
+
+// إغلاق القائمة عند النقر خارجها
+document.addEventListener('click', function(e) {
+    if (!megaDropdown.contains(e.target)) {
+        megaDropdown.classList.remove('active');
+    }
+});
+
+// منع إغلاق القائمة عند النقر داخلها
+megaDropdown.addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+
+// إدارة القوائم المنسدلة في وضع الجوال
+if (window.innerWidth <= 768) {
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    navItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        
+        link.addEventListener('click', function(e) {
+            if (item.classList.contains('mega-dropdown')) {
+                e.preventDefault();
+                item.classList.toggle('active');
+            } else if (item.querySelector('.dropdown-menu')) {
+                e.preventDefault();
+                item.classList.toggle('active');
+            }
         });
-
-        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
+    });
+}
 
         // فلترة المنتجات
         const filterTags = document.querySelectorAll(".filter-tag");
