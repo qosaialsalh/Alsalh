@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7908410751799877"
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="direction" content="خدمات طباعة أونلاين احترافية: طباعة كتيبات، بروشور، بطاقات عمل، بانرات، والتيشيرتات، ودعوات زواج، مع التصميم والتوصيل السريع لجميع مطبوعاتك التجارية والشخصية">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ختم برو - متجر الأختام الاحترافية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -79,12 +82,7 @@
         .nav-item {
             margin-left: 20px;
         }
-          .product-detail-price,
-        .cart-item-price,
-        .cart-total,
-        .product-price{
-            display: none;
-        }
+        
         .nav-link {
             text-decoration: none;
             color: var(--dark-color);
@@ -237,7 +235,9 @@
         }
         
         .product-image {
-            height: 180px;
+               padding-top: 10px;
+          max-width: 100%;
+         height: 200px;
             overflow: hidden;
             position: relative;
             display: flex;
@@ -247,8 +247,8 @@
         }
         
         .product-image img {
-            max-width: 75%;
-            max-height: 75%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
             transition: transform 0.5s;
         }
@@ -290,6 +290,7 @@
         
         .product-price {
             font-weight: bold;
+             display: none;
             color: var(--primary-color);
             font-size: 1.1rem;
             margin-bottom: 12px;
@@ -413,6 +414,8 @@
         .footer-contact-icon {
             margin-left: 10px;
             color: var(--accent-color);
+
+            /* background-color: #E9B213; */
             width: 20px;
         }
         
@@ -432,7 +435,8 @@
             justify-content: center;
             width: 35px;
             height: 35px;
-            background: rgba(255, 255, 255, 0.1);
+            /* background: rgba(255, 255, 255, 0.1); */
+            background: #ffc00a;
             border-radius: 50%;
             margin-left: 10px;
             transition: all 0.3s;
@@ -608,6 +612,7 @@
         }
         
         .product-detail-price {
+            display: none;
             font-size: 1.5rem;
             color: var(--primary-color);
             font-weight: bold;
@@ -684,6 +689,7 @@
         }
         
         .cart-item-price {
+            display: none;
             color: var(--primary-color);
             font-weight: bold;
         }
@@ -730,8 +736,15 @@
             background-color: #f9f9f9;
             border-top: 1px solid #eee;
         }
+        .product-detail-price,
+        .cart-item-price,
+        .cart-total,
+        .product-price{
+            display: none;
+        }
         
         .cart-total {
+            display: none;
             display: flex;
             justify-content: space-between;
             font-size: 1.2rem;
@@ -773,13 +786,14 @@
     <nav>
         <div class="container nav-container">
             <div class="nav-logo">
-                <img src="https://via.placeholder.com/150x50/1a365d/ffffff?text=ختم+برو" alt="شعار متجر الأختام">
+            <img src="mmt.webp" alt="شعار متجر الأختام">
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="home2.html" class="nav-link">الرئيسية</a></li>
-                <li class="nav-item"><a href="home2.html" class="nav-link">المنتجات</a></li>
-                <li class="nav-item"><a href="home2.html" class="nav-link">عن المتجر</a></li>
-                <li class="nav-item"><a href="home2.html" class="nav-link">اتصل بنا</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li class="nav-item"><a href="#all" class="nav-link">المنتجات</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">عن المتجر</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">معرض الاعمال </a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">اتصل بنا</a></li>
             </ul>
             <a href="#" class="cart-btn" id="cartButton">
                 <i class="fas fa-shopping-cart"></i>
@@ -797,82 +811,736 @@
     <!-- رأس الصفحة -->
     <div class="page-header">
         <div class="container">
-            <h1 class="page-title"> منتجات arwa </h1>
-            <p class="page-description"> نقدم لك مجموعة متنوعة من خدمات الطباعة والتخصيص عالية الجودة. سواء كنت تحتاج إلى طباعة شعارك على منتجات مثل الأكواب والقمصان والشنط، أو تصميم مطبوعات خاصة بالفعاليات والهدايا، فنحن نضمن لك نتائج دائمة وواضحة.</p>
+            <h1 class="page-title">منتجات arwa </h1>
+                      <p class="page-description">    
+                <big><u>arwa</u></big>. 
+            </p>
         </div>
     </div>
 
     <div class="container">
         <!-- قسم الأختام -->
         <section id="seals">
-            <h2 class="section-title">منتجاتنا المميزة</h2>
+            <h2 class="section-title"> منتجاتنا المميزة  </h2>
             
-            <div class="products-grid">
-                <!-- ختم أولومانيك بيضاوي -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x200/1a365d/ffffff?text=ختم+أولومانيك" alt="ختم أولومانيك بيضاوي">
-                        <div class="product-badge">الأكثر مبيعاً</div>
+            <div class="products-grid" id="all">
+
+          <!-- منتج 1: بطاقات تعريفية -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="111.webp" alt="بطاقات تعريفية">
+                <div class="product-badge">جديد </div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title" >بطاقات تعريفية </h3>
+                <p class="product-description">طباعة   بطاقات تعريفية بجودة عالية بتصميمات مميزة تناسب شركتك.</p>
+                <div class="product-meta">
+                    <div class="product-price">50.00 ريال/100 بطاقة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="product-content">
-                        <h3 class="product-title">ختم أولومانيك بيضاوي</h3>
-                        <p class="product-description">ختم عالي الجودة بشكل بيضاوي أنيق، مثالي للاستخدامات الرسمية</p>
-                        <span class="product-price">75 ريال</span>
-                        <div class="product-actions">
-                            <button class="btn btn-outline details-btn" data-id="1">التفاصيل</button>
-                            <button class="btn btn-primary add-to-cart" data-id="1" data-name="ختم أولومانيك بيضاوي" data-price="75" data-image="https://via.placeholder.com/300x200/1a365d/ffffff?text=ختم+أولومانيك">اطلب الآن</button>
-                        </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn1.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 2: فلم -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="222.webp" alt="كروت شخصية ">
+                <div class="product-badge">جديد</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> ختم</h3>
+                <p class="product-description">طباعة  اختام إعلانية بجودة عالية الدقة ومقاومة للعوامل الجوية.</p>
+                <div class="product-meta">
+                    <div class="product-price">30.00 ريال/متر</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn4.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 3: أظرف -->
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="333.webp" alt="مطويات ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> أظرف</h3>
+                <p class="product-description">طباعة  اظرف بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                   
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn3.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 4: فلايرات -->
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="444.webp" alt="ملصقات ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">فلايرات</h3>
+                <p class="product-description">طباعة  فلايرات بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn10.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 5: طباعة المستندات -->
+     
+        <!-- منتج 3: أظرف -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="007-shop.webp" alt="حروف بارزة">
+                <div class="product-badge">عرض خاص</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> عزتنا بطبعتنا </h3>
+                <p class="product-description">طباعة حروف بارزة بجودة عالية وبمقاسات مختلفة تناسب جميع الاستخدامات.</p>
+                <div class="product-meta">
+                    <div class="product-price">20.00 ريال/100 ظرف</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pr6.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 4: فلايرات -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="048-poster-250x250-1.webp" alt="لوحات">
+                <div class="product-badge">الأكثر مبيعاً</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">لوحات</h3>
+                <p class="product-description">طباعة لوحات إعلانية بألوان زاهية وتصميم جذاب لتعزيز الحملات التسويقية.
+                </p>
+                <div class="product-meta">
+                    <div class="product-price">40.00 ريال/100 فلاير</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn55.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+<!--  -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="777.webp" alt="بطاقات تعريفية">
+                <div class="product-badge">كتب وكتيبات</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title" >كتب وكتيبات  </h3>
+                <p class="product-description">طباعة  كتب وكتيبات بجودة عالية بتصميمات مميزة تناسب شركتك.</p>
+                <div class="product-meta">
+                    <div class="product-price">50.00 ريال/100 بطاقة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn9.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 2: فلم -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="888.webp" alt="كروت شخصية ">
+                <div class="product-badge">جديد</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> كروت شخصية </h3>
+                <p class="product-description">طباعة كروت شخصية إعلانية بجودة عالية الدقة ومقاومة للعوامل الجوية.</p>
+                <div class="product-meta">
+                    <div class="product-price">30.00 ريال/متر</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn2.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 3: أظرف -->
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="999.webp" alt="مطويات ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> مطويات </h3>
+                <p class="product-description">طباعة  مطويات بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn11.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 4: فلايرات -->
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="1010.webp" alt="ملصقات ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> ملصقات </h3>
+                <p class="product-description">طباعة  ملصقات بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn66.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 5: طباعة المستندات -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="1111.webp" alt=" فواتير وسندات">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> نوتات </h3>
+                <p class="product-description">طباعة   نوتات بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 6: التصميم الجرافيكي -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="1212.webp" alt="التصميم الجرافيكي">
+                <div class="product-badge">فولدر شركتنا</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">ورق مراسلات
+                </h3>
+                <p class="product-description">تصميم ورق مراسلات  للمواد المطبوعة والرقمية بمختلف أنواعها.</p>
+                <div class="product-meta">
+                    <div class="product-price">100.00 ريال/تصميم</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn5.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- kjjjjjjjjjjjjjj -->
+         <!-- منتج 1: بطاقات تعريفية -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="ph7-12.webp" alt=" شرd'">
+                <div class="product-badge">الأكثر مبيعاً</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> ميداليات أكريلك</h3>
+                <p class="product-description">طباعة   ميداليات اكريك بجودة عالية بتصميمات مميزة تناسب شركتك.</p>
+                <div class="product-meta">
+                    <div class="product-price">50.00 ريال/100 بطاقة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7-5.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 2: فلم -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="ph7-13.webp" alt="نوته" style="max-width: 100%; ">
+                <div class="product-badge">جديد</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">معطرات سيارة </h3>
+                <p class="product-description">طباعة معطرات سيارات إعلانية بجودة عالية الدقة ومقاومة للعوامل الجوية.</p>
+                <div class="product-meta">
+                    <div class="product-price">30.00 ريال/متر</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
                     </div>
                 </div>
                 
-                <!-- ختم أولومانيك دائري -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x200/2d3748/ffffff?text=ختم+دائري" alt="ختم أولومانيك دائري">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">ختم أولومانيك دائري</h3>
-                        <p class="product-description">ختم دائري كلاسيكي بتصميم أنيق، يناسب جميع الاستخدامات المكتبية</p>
-                        <span class="product-price">70 ريال</span>
-                        <div class="product-actions">
-                            <button class="btn btn-outline details-btn" data-id="2">التفاصيل</button>
-                            <button class="btn btn-primary add-to-cart" data-id="2" data-name="ختم أولومانيك دائري" data-price="70" data-image="https://via.placeholder.com/300x200/2d3748/ffffff?text=ختم+دائري">اطلب الآن</button>
-                        </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7-6.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 5: طباعة المستندات -->
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="006-truck-250x250-1.webp" alt="ستيكرات ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> ستيكرات  </h3>
+                <p class="product-description">طباعة ستيكرات عادية بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
                 </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn4-3.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 6: التصميم الجرافيكي -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="banner.webp" alt=" ستاندات">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">  ستاندات </h3>
+                <p class="product-description">طباعة  ستاندات بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn22.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 6: التصميم الجرافيكي -->
+
+        <!-- منتج 3: أظرف -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Asset-6.webp" alt="ورق تغليف">
+                <div class="product-badge">عرض خاص</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">ورق تغليف</h3>
+                <p class="product-description">طباعة ورق تغليف بجودة عالية وبمقاسات مختلفة تناسب جميع الاستخدامات.</p>
+                <div class="product-meta">
+                    <div class="product-price">20.00 ريال/100 ظرف</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn1-7.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 4: فلايرات -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Asset-4.webp" alt="كروت شكر">
+                <div class="product-badge">الأكثر مبيعاً</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">كروت شكر</h3>
+                <p class="product-description">طباعة كروت شكر  بألوان زاهية وتصميم جذاب لتعزيز الحملات التسويقية.
+                </p>
+                <div class="product-meta">
+                    <div class="product-price">40.00 ريال/100 فلاير</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn13.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 5: طباعة المستندات -->
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Asset-7.webp" alt="شرائط تغليف ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> شرائط تغليف </h3>
+                <p class="product-description">طباعة  شرائط تغليف بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn1-9.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 6: التصميم الجرافيكي -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Asset-5.webp" alt="  تاقات منوعة ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">  تاقات منوعة </h3>
+                <p class="product-description">طباعة  تاقات منوعة بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn15.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
                 
-                <!-- ختم ليزر -->
+
+                <!--  2 -->
+         
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x200/ed8936/ffffff?text=ختم+ليزر" alt="ختم ليزر">
-                        <div class="product-badge">جديد</div>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">ختم ليزر احترافي</h3>
-                        <p class="product-description">ختم ليزر عالي الدقة بشكل بيضاوي، بتقنية متطورة ودقة فائقة</p>
-                        <span class="product-price">95 ريال</span>
-                        <div class="product-actions">
-                            <button class="btn btn-outline details-btn" data-id="3">التفاصيل</button>
-                            <button class="btn btn-primary add-to-cart" data-id="3" data-name="ختم ليزر احترافي" data-price="95" data-image="https://via.placeholder.com/300x200/ed8936/ffffff?text=ختم+ليزر">اطلب الآن</button>
-                        </div>
+            <div class="product-image">
+                <img src="044-coffee-cup-250x250-1.webp" alt="اكواب" style="max-width: 100%; ">
+                <div class="product-badge">جديد</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> اكواب </h3>
+                <p class="product-description">طباعة اكواب  بجودة عالية الدقة ومقاومة للعوامل الجوية.</p>
+                <div class="product-meta">
+                    <div class="product-price">30.00 ريال/متر</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
                     </div>
                 </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn1-11.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 3: أظرف -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="050-shopping-bag-250x250-1.webp" alt="اكياس">
+                <div class="product-badge">عرض خاص</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">اكياس</h3>
+                <p class="product-description">طباعة اكياس بجودة عالية وبمقاسات مختلفة تناسب جميع الاستخدامات.</p>
+                <div class="product-meta">
+                    <div class="product-price">20.00 ريال/100 ظرف</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn1-4.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 4: فلايرات -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="direction.webp" alt="بادج">
+                <div class="product-badge">الأكثر مبيعاً</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">بادج</h3>
+                <p class="product-description">طباعة بادج إعلانية بألوان زاهية وتصميم جذاب لتعزيز الحملات التسويقية.
+                </p>
+                <div class="product-meta">
+                    <div class="product-price">40.00 ريال/100 فلاير</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7-10.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 5: طباعة المستندات -->
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="012-sticker3.webp" alt="بروشات ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> بروشات </h3>
+                <p class="product-description">طباعة بروشات عادية بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7-9.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+        <!-- منتج 6: التصميم الجرافيكي -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="023-shirt-250x250-1.webp" alt="تي شيرت    ">
+                <div class="product-badge">شعبي</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">  تي شرت </h3>
+                <p class="product-description">طباعة تي شيرت  بجودة عادية أو عالية، مع خيارات متعددة للتجليد.</p>
+                <div class="product-meta">
+                    <div class="product-price">0.30 ريال/صفحة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7-11.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+             
+<!-- kjlllllllllll --><!-- منتج 1: بطاقات تعريفية -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="business-777.webp" alt=" شريط تعليق" style="max-width: 100%;">
+                <div class="product-badge">الأكثر مبيعاً</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> شريط تعليق</h3>
+                <p class="product-description">طباعة  شريط تعليق بجودة عالية بتصميمات مميزة تناسب شركتك.</p>
+                <div class="product-meta">
+                    <div class="product-price">50.00 ريال/100 بطاقة</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7-13.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 2: فلم -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="agenda-1.webp" alt="نوته" style="max-width: 100%; ">
+                <div class="product-badge">جديد</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title"> نوته </h3>
+                <p class="product-description">طباعة نوته إعلانية بجودة عالية الدقة ومقاومة للعوامل الجوية.</p>
+                <div class="product-meta">
+                    <div class="product-price">30.00 ريال/متر</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 3: أظرف -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="026-cap-250x250-1.webp" alt="كاب">
+                <div class="product-badge">عرض خاص</div>
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">كاب</h3>
+                <p class="product-description">طباعة كاب بجودة عالية وبمقاسات مختلفة تناسب جميع الاستخدامات.</p>
+                <div class="product-meta">
+                    <div class="product-price">20.00 ريال/100 ظرف</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-actions" style="text-align: center">
+                    <a href="pn7-12.html" class="btn btn-outline" style="text-align: center">التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- منتج 4: فلايرات -->
+   
+           
+                <!-- jsakh -->
                 
-                <!-- ختم صغير -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/300x200/e53e3e/ffffff?text=ختم+صغير" alt="ختم صغير">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">ختم أولومانيك صغير</h3>
-                        <p class="product-description">ختم بيضاوي صغير الحجم، مناسب للأختام الشخصية والاستخدام الفردي</p>
-                        <span class="product-price">60 ريال</span>
-                        <div class="product-actions">
-                            <button class="btn btn-outline details-btn" data-id="4">التفاصيل</button>
-                            <button class="btn btn-primary add-to-cart" data-id="4" data-name="ختم أولومانيك صغير" data-price="60" data-image="https://via.placeholder.com/300x200/e53e3e/ffffff?text=ختم+صغير">اطلب الآن</button>
-                        </div>
-                    </div>
-                </div>
+                       
             </div>
         </section>
     </div>
@@ -883,7 +1551,7 @@
             <div class="footer-container">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <img src="https://via.placeholder.com/150x50/ffffff/1a365d?text=ختم+برو" alt="شعار متجر الأختام">
+                        <img src="" alt="شعار متجر الأختام">
                     </div>
                     <p>متخصصون في تصنيع وتوريد جميع أنواع الأختام عالية الجودة. نقدم منتجات احترافية بأسعار تنافسية.</p>
                     <div class="social-links">
@@ -897,10 +1565,11 @@
                 <div class="footer-links">
                     <h3 class="footer-heading">روابط سريعة</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="products.html">المنتجات</a></li>
-                        <li><a href="about.html">عن المتجر</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
+               <li class="nav-item"><a href=".html" class="nav-link">الرئيسية</a></li>
+                <li class="nav-item"><a href="#all" class="nav-link">المنتجات</a></li>
+                <li class="nav-item"><a href=".html" class="nav-link">عن المتجر</a></li>
+                <li class="nav-item"><a href=".html" class="nav-link">معرض الاعمال </a></li>
+                <li class="nav-item"><a href=".html" class="nav-link">اتصل بنا</a></li>
                     </ul>
                 </div>
                 
@@ -908,21 +1577,21 @@
                     <h3 class="footer-heading">معلومات التواصل</h3>
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt footer-contact-icon"></i>
-                        <span class="footer-contact-text">الرياض، المملكة العربية السعودية</span>
+                        <span class="footer-contact-text"> الجمهورية العربية السورية  </span>
                     </div>
                     <div class="footer-contact-item">
-                        <i class="fas fa-phone footer-contact-icon"></i>
-                        <span class="footer-contact-text">+966 11 123 4567</span>
+                           <a href="https://wa.me/966531288914"><i class="fas fa-phone footer-contact-icon"></i></a>
+                        <span >914  288 531 966+</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope footer-contact-icon"></i>
-                        <span class="footer-contact-text">info@khatem-pro.com</span>
+                        <span>homamalkhald1@gmail.com</span>
                     </div>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>© 2023 متجر ختم برو. جميع الحقوق محفوظة</p>
+                <p>© 2025 متجر مطبوعات. جميع الحقوق محفوظة</p>
             </div>
         </div>
     </footer>
@@ -936,10 +1605,11 @@
             </div>
             <div class="modal-body">
                 <div class="product-detail-images">
-                    <img src="" alt="صورة المنتج الرئيسية" id="modalMainImage">
-                    <img src="https://via.placeholder.com/150/1a365d/ffffff?text=صورة+2" alt="صورة إضافية 1">
-                    <img src="https://via.placeholder.com/150/2d3748/ffffff?text=صورة+3" alt="صورة إضافية 2">
-                    <img src="https://via.placeholder.com/150/ed8936/ffffff?text=صورة+4" alt="صورة إضافية 3">
+                    <img src="5.webp" alt="صورة المنتج الرئيسية" id="modalMainImage">
+                    <img src="4.webp" alt="صورة إضافية 1">
+                    <img src="3.webp" alt="صورة إضافية 3">
+                    <img src="1.webp" alt="صورة إضافية 2">
+                    <!-- <img src="80024ff3936034e8a45838a9690b1dc3.jpg" alt="صورة إضافية 3">/ -->
                 </div>
                 <div class="product-detail-info">
                     <div>
@@ -953,7 +1623,7 @@
                             <li>مصنوع من مواد عالية الجودة</li>
                             <li>يدوم طويلاً مع الاستخدام المتكرر</li>
                             <li>تصميم أنيق ومميز</li>
-                            <li>سهل الاستخدام والتحكم</li>
+                            <!-- <li>سهل الاستخدام والتحكم</li> -->
                             <li>يناسب الاستخدامات الرسمية والشخصية</li>
                         </ul>
                     </div>
@@ -991,50 +1661,23 @@
             </div>
         </div>
     </div>
+<!-- <img src="f94d7e9fc8876bd41c9b17c1ad85bdbe.jpg" alt=""> -->
+<script>
+    // alert("wellcome to syria");
+    
+    // البيانات الخاصة بالمنتجات
+    const products = {
+        1: {
+            name: " شال اليوم الوطني عزنا بطبعنا",
+            description: " طباعة شال اليوم الوطني عزنا بطبعنا بجودة عالية بتصميمات مميزة تناسب شركتك.",
+            price: "75 ريال",
+            images: [
+                "1.webp"
+            ]
+        },
+      
 
-    <script>
-        // البيانات الخاصة بالمنتجات
-        const products = {
-            1: {
-                name: "ختم أولومانيك بيضاوي",
-                description: "ختم أولومانيك عالي الجودة بشكل بيضاوي أنيق، مثالي للاستخدامات الرسمية. مصنوع من أفضل المواد التي تضمن وضوح البصمة وطول العمر.",
-                price: "75 ريال",
-                images: [
-                    "https://via.placeholder.com/300x200/1a365d/ffffff?text=ختم+أولومانيك",
-                    "https://via.placeholder.com/300x200/2d3748/ffffff?text=صورة+إضافية+1",
-                    "https://via.placeholder.com/300x200/38a169/ffffff?text=صورة+إضافية+2"
-                ]
-            },
-            2: {
-                name: "ختم أولومانيك دائري",
-                description: "ختم دائري كلاسيكي بتصميم أنيق، يناسب جميع الاستخدامات المكتبية. يتميز بمقبض مريح وسهولة في الاستخدام.",
-                price: "70 ريال",
-                images: [
-                    "https://via.placeholder.com/300x200/2d3748/ffffff?text=ختم+دائري",
-                    "https://via.placeholder.com/300x200/4a5568/ffffff?text=صورة+إضافية+1",
-                    "https://via.placeholder.com/300x200/38a169/ffffff?text=صورة+إضافية+2"
-                ]
-            },
-            3: {
-                name: "ختم ليزر احترافي",
-                description: "ختم ليزر عالي الدقة بشكل بيضاوي، بتقنية متطورة ودقة فائقة. مثالي للشركات والمؤسسات التي تبحث عن جودة واحترافية في الأختام.",
-                price: "95 ريال",
-                images: [
-                    "https://via.placeholder.com/300x200/ed8936/ffffff?text=ختم+ليزر",
-                    "https://via.placeholder.com/300x200/d69e2e/ffffff?text=صورة+إضافية+1",
-                    "https://via.placeholder.com/300x200/38a169/ffffff?text=صورة+إضافية+2"
-                ]
-            },
-            4: {
-                name: "ختم أولومانيك صغير",
-                description: "ختم بيضاوي صغير الحجم، مناسب للأختام الشخصية والاستخدام الفردي. سهل الحمل والاستخدام مع نتائج واضحة ومميزة.",
-                price: "60 ريال",
-                images: [
-                    "https://via.placeholder.com/300x200/e53e3e/ffffff?text=ختم+صغير",
-                    "https://via.placeholder.com/300x200/c53030/ffffff?text=صورة+إضافية+1",
-                    "https://via.placeholder.com/300x200/38a169/ffffff?text=صورة+إضافية+2"
-                ]
-            }
+
         };
 
         // JavaScript للتحكم في قائمة الهواتف
